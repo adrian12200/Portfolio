@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const curtainMenu = document.getElementById('curtain-menu');
     const header = document.getElementById('header');
     const anchorTags = header.querySelectorAll('a');
-    const menu = document.getElementById('menu-list');
-    const menuList = menu.querySelectorAll('a');
 
     // Function to toggle element visibility
     function toggleCurtainMenuVisibility() {
