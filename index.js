@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const burgerBtn = document.getElementById('burgerBtn');
     const curtainMenu = document.getElementById('curtain-menu');
     const header = document.getElementById('header');
+    const anchorTags = header.querySelectorAll('a');
     const menu = document.getElementById('menu-list');
     const menuList = menu.querySelectorAll('a');
 
@@ -11,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const isMd = window.matchMedia('(min-width: 768px)').matches;
 
         // Check if the curtain menu is toggled
-        const isToggled = curtainMenu.style.width = "60%";
+        const isToggled = curtainMenu.style.width = "100%";
 
         // Toggle curtain menu visibility based on the viewport width and toggle state
         if (isMd || isToggled) {
             curtainMenu.style.width = "0";
         } else {
-            curtainMenu.style.width = "60%";
+            curtainMenu.style.width = "100%";
         }
     }
 
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentWidth = parseFloat(getComputedStyle(curtainMenu).width);
 
         if (currentWidth === 0) {
-            curtainMenu.style.width = "60%";
+            curtainMenu.style.width = "100%";
         } else {
             curtainMenu.style.width = "0%";
         }
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener for changes in viewport width, but only if the curtain menu is toggled
     window.addEventListener('resize', function() {
-        if (curtainMenu.style.width = "60%") {
+        if (curtainMenu.style.width = "100%") {
             toggleCurtainMenuVisibility();
         }
     });
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add click event listeners to each anchor tag
-    menuList.forEach(function(anchor) {
+    anchorTags.forEach(function(anchor) {
         anchor.addEventListener('click', closeMenuOnClick);
     });
 });
