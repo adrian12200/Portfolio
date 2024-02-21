@@ -27,8 +27,8 @@
 <body class="text-neutral">
     <div> <!-- content wrapper -->
         <header class="sticky top-0"> <!-- header -->
-            <nav class="bg-white h-20 w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] z-50">
-                <div id="header" class="flex justify-between items-center h-full w-full px-5 md:hidden">
+            <nav class="bg-white h-20 w-full shadow-[0_4px_8px_rgba(0,0,0,0.1)] z-50 md:flex md:justify-center">
+                <div id="header" class="flex justify-between items-center h-full w-full px-5 translate-in md:max-w-[1280px] md:px-12">
                     <a href="#home"><h2 class="font-semibold">@Adrian<span class="text-primary-100">Bontigao</span>.</h2></a>
                     <button id="burgerBtn" class="text-neutral flex md:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#0a0a0a" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
@@ -37,25 +37,26 @@
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
                     </button>
-                </div>
-                <!-- curtain menu -->
-                <div id="curtain-menu" class="flex h-screen fixed hidden top-[4.9rem] md:hidden">
-                    <div class="w-64 bg-white">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact"></a>Contact</li>
+                    <!-- curtain menu -->
+                    <div id="curtain-menu" class="w-0 bg-white h-screen overflow-x-hidden fixed left-0 top-[4.9rem] border-r-zinc-300 transition-all duration-100">
+                        <div class="flex flex-column text-md font-semibold uppercase justify-center mt-4">
+                            <ul id="menu-list" class="space-y-6 text-center">
+                                <li><a href="#home" class="p-2 hover:text-primary-100 ease-out duration-100">Home</a></li>
+                                <li><a href="#about" class="p-2 hover:text-primary-100 ease-out duration-100">About</a></li>
+                                <li><a href="#projects" class="p-2 hover:text-primary-100 ease-out duration-100">Projects</a></li>
+                                <li><a href="#contact" class="p-2 hover:text-primary-100 ease-out duration-100">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- to be removed depending on the code above -->
+                    <div class="hidden md:flex">
+                        <ul class="flex text-md font-semibold uppercase translate-in space-x-12">
+                            <li><a href="#home" class="p-2 hover:text-primary-100 ease-out duration-100 ">Home</a></li>
+                            <li><a href="#about" class="p-2 hover:text-primary-100 ease-out duration-100">About</a></li>
+                            <li><a href="#projects" class="p-2 hover:text-primary-100 ease-out duration-100">Projects</a></li>
+                            <li><a href="#contact" class="p-2 hover:text-primary-100 ease-out duration-100">Contact</a></li>
                         </ul>
                     </div>
-                </div> <!-- to be removed depending on the code above -->
-                <div class="w-full h-full flex justify-center items-center">
-                    <ul class="hidden md:flex text-lg font-semibold uppercase translate-in space-x-24">
-                        <li><a href="#home" class="p-2 hover:text-primary-100 ease-out duration-100 ">Home</a></li>
-                        <li><a href="#about" class="p-2 hover:text-primary-100 ease-out duration-100">About</a></li>
-                        <li><a href="#projects" class="p-2 hover:text-primary-100 ease-out duration-100">Projects</a></li>
-                        <li><a href="#contact" class="p-2 hover:text-primary-100 ease-out duration-100">Contact</a></li>
-                    </ul>
                 </div>
             </nav>
         </header>
@@ -81,7 +82,7 @@
                         <div class="text-white w-full md:w-2/4">
                             <h2 class="uppercase text-2xl justify-start my-10 tracking-widest font-medium">About me</h2>
                             <p class="text-xl mb-10 md:mb-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non in soluta dicta totam alias perspiciatis, culpa corrupti accusantium et quia quis dolor impedit, voluptatum molestiae dolore repellendus dolores, minus debitis?</p>
-                            <div class="flex mb-10">
+                            <div class="flex mb-10"> <!-- svg programming language icons -->
                                 <svg class="mr-2 hover:scale-[1.3]" fill="#FFFFFF" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>HTML5</title> <path d="M11.677 13.196l-0.289-3.387 12.536 0.004 0.287-3.268-16.421-0.004 0.87 9.983h11.374l-0.406 4.27-3.627 1.002-3.683-1.009-0.234-2.63h-3.252l0.411 5.198 6.757 1.807 6.704-1.798 0.927-10.166h-11.954zM2.914 1.045h26.172l-2.38 26.874-10.734 3.037-10.673-3.038z"></path> </g></svg>
                                 <svg class="mx-2 hover:scale-[1.3]" fill="#FFFFFF" width="40px" height="40px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>CSS3</title> <path d="M24.235 6.519l-16.47-0.004 0.266 3.277 12.653 0.002-0.319 3.394h-8.298l0.3 3.215h7.725l-0.457 4.403-3.636 1.005-3.694-1.012-0.235-2.637h-3.262l0.362 4.817 6.829 2.128 6.714-1.912 1.521-16.675zM2.879 1.004h26.242l-2.387 26.946-10.763 3.045-10.703-3.047z"></path> </g></svg>
                                 <svg class="mx-2 hover:scale-[1.3]" width="40px" height="40px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title>TailwindCSS</title><path d="M9,13.7q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q11.1,10.9,9,13.7ZM2,22.1q1.4-5.6,7-5.6c5.6,0,6.3,4.2,9.1,4.9q2.8.7,4.9-2.1-1.4,5.6-7,5.6c-5.6,0-6.3-4.2-9.1-4.9Q4.1,19.3,2,22.1Z" style="fill:#ffffff"></path></g></svg>
