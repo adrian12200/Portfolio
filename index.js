@@ -55,3 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', closeMenuOnClick);
     });
 });
+
+function scrollToElement(elmRef) {
+    window.scrollTo({ top: elmRef.offsetTop - 50, behavior: 'smooth' });
+}
+
+// Function to be called on menu item click
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        scrollToElement(section);
+    }
+}
